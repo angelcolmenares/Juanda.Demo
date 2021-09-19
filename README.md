@@ -1,2 +1,0 @@
-# Juanda.Demo
-pwa demo
