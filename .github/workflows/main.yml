@@ -13,6 +13,10 @@ jobs:
     # uses GitHub's checkout action to checkout code form the master branch
     - uses: actions/checkout@v2
     
+    # changes the base-tag in index.html from '/' to 'Juanda.Demo' to match GitHub Pages repository subdirectory
+    - name: Change base-tag in index.html from / to Juanda.Demo
+      run: sed -i 's/<base href="\/" \/>/<base href="\/Juanda.Demo\/" \/>/g' wwwroot/index.html
+      
     # sets up .NET Core SDK 3.1
     - name: Setup .NET Core SDK
       uses: actions/setup-dotnet@v1
@@ -22,10 +26,6 @@ jobs:
     # publishes Blazor project to the release-folder
     - name: Publish .NET Core Project
       run: dotnet publish Juanda.Demo.csproj -c Release -o release --nologo
-    
-    # changes the base-tag in index.html from '/' to 'Juanda.Demo' to match GitHub Pages repository subdirectory
-    - name: Change base-tag in index.html from / to Juanda.Demo
-      run: sed -i 's/<base href="\/" \/>/<base href="\/Juanda.Demo\/" \/>/g' release/wwwroot/index.html
     
     # copy index.html to 404.html to serve the same file when a file is not found
     - name: copy index.html to 404.html
