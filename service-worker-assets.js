@@ -157,10 +157,6 @@
       "url": "Juanda.Demo.styles.css"
     },
     {
-      "hash": "sha256-\/LrPqa5O0fY3F+fwHxVEOZ8iK4Odm3Y06peyXLSpcwY=",
-      "url": "404.html"
-    },
-    {
       "hash": "sha256-YJtNewyfFHu4sRjg7gG0v77009iY7xcOM2wcyv4PAtM=",
       "url": "css\/app.css"
     },
@@ -233,5 +229,5 @@
       "url": "sample-data\/weather.json"
     }
   ],
-  "version": "fPcihaBV"
+  "version": "My+fgqI3"
 };
